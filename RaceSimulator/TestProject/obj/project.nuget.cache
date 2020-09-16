@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q1qwitNUBQkMo5AxAuzwxHDg8eihviqKsRgO7pwXK8Hw6RZDj+zFZyLzOG94G+s2tVtgKmJrhIuHeemy0f1ItA==",
+  "dgSpecHash": "UfI3pUOoViM50leSUqofOPovE1jRI15/vmoYieh2gKnaRhNavPVshpBzBwMgIB4veIndt6GLaEQmEFgs+k6iUQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulator\\TestProject\\TestProject.csproj",
+  "projectFilePath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\TestProject\\TestProject.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

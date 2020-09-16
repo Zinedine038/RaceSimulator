@@ -48,11 +48,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zsgha\\source\\repos\\RaceSimulator\\RaceSimulator\\View.csproj",
+      "projectUniqueName": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\RaceSimulator\\View.csproj",
       "projectName": "View",
-      "projectPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulator\\RaceSimulator\\View.csproj",
+      "projectPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\RaceSimulator\\View.csproj",
       "packagesPath": "C:\\Users\\zsgha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulator\\RaceSimulator\\obj\\",
+      "outputPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\RaceSimulator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zsgha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -68,11 +68,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\zsgha\\source\\repos\\RaceSimulator\\Controller\\Controller.csproj": {
-              "projectPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulator\\Controller\\Controller.csproj"
+            "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Controller\\Controller.csproj": {
+              "projectPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Controller\\Controller.csproj"
             },
-            "C:\\Users\\zsgha\\source\\repos\\RaceSimulator\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulator\\Model\\Model.csproj"
+            "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\Model.csproj"
             }
           }
         }
