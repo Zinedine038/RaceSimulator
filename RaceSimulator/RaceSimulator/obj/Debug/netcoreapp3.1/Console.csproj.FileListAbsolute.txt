@@ -1,0 +1,3 @@
+C:\Users\zsgha\source\repos\RaceSimulator\RaceSimulator\obj\Debug\netcoreapp3.1\Console.AssemblyInfoInputs.cache
+C:\Users\zsgha\source\repos\RaceSimulator\RaceSimulator\obj\Debug\netcoreapp3.1\Console.AssemblyInfo.cs
+C:\Users\zsgha\source\repos\RaceSimulator\RaceSimulator\obj\Debug\netcoreapp3.1\Console.csproj.CoreCompileInputs.cache
