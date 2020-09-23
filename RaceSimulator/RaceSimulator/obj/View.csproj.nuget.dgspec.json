@@ -26,7 +26,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\Model.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
