@@ -11,6 +11,11 @@ namespace Model
         public int Speed { get; set; }
         public int IsBroken { get; set; }
 
+        public Car()
+        {
+
+        }
+
         public Car(int quality, int performance, int speed, int isBroken)
         {
             Quality = quality;

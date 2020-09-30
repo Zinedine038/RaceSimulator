@@ -1,6 +1,7 @@
 ﻿using System;
 using Model;
 using Controller;
+using System.Threading;
 
 namespace View
 {
@@ -8,7 +9,14 @@ namespace View
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Data.Initialize();
+            Data.NextRace();
+            Console.WriteLine(Data.CurrentRace.Track.Name);
+
+            for(; ; )
+            {
+                Thread.Sleep(100);
+            }
         }
     }
 }

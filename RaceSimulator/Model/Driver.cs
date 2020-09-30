@@ -14,6 +14,9 @@ namespace Model
         public Driver(string name)
         {
             Name = name;
+            Points = 0;
+            Equipment = new Car();
+
         }
 
         public Driver(string name, int points, IEquipment equipment, TeamColours tamColour)

@@ -1,0 +1,12 @@
+C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\bin\Debug\netcoreapp3.1\Controller.deps.json
+C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\bin\Debug\netcoreapp3.1\Controller.dll
+C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\bin\Debug\netcoreapp3.1\Controller.pdb
+C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\bin\Debug\netcoreapp3.1\Model.dll
+C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\bin\Debug\netcoreapp3.1\Model.pdb
+C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.csprojAssemblyReference.cache
+C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.AssemblyInfoInputs.cache
+C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.AssemblyInfo.cs
+C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.csproj.CopyComplete
+C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.dll
+C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.pdb
+C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.csproj.CoreCompileInputs.cache

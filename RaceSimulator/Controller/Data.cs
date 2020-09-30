@@ -5,9 +5,10 @@ using Model;
 
 namespace Controller
 {
-    static class Data
+    public static class Data
     {
         public static Competition Competition { get; set; }
+        public static Race CurrentRace { get; set; }
         public static void Initialize()
         {
             Competition = new Competition();
@@ -24,10 +25,18 @@ namespace Controller
         }
         public static void AddTrack()
         {
-            Competition.tracks.Enqueue(new Track("Top Gear testtrack"));
-            Competition.tracks.Enqueue(new Track("Silverstone"));
-            Competition.tracks.Enqueue(new Track("Nordschleife"));
+            Competition.Tracks.Enqueue(new Track("Top Gear testtrack"));
+            Competition.Tracks.Enqueue(new Track("Silverstone"));
+            Competition.Tracks.Enqueue(new Track("Nordschleife"));
 
+        }
+
+        public static void NextRace()
+        {
+            if(Competition.NextTrack()!=null)
+            {
+                CurrentRace = new Race(Competition.NextTrack(), Competition.Participants);
+            }
         }
     }
 }
