@@ -27,7 +27,7 @@ namespace Model
             var section = new LinkedList<Section>();
             foreach (SectionType s in sectionTypes)
                 section.AddLast(new Section(s));
-            return null;
+            return section;
         }
        
     }

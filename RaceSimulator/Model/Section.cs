@@ -4,6 +4,13 @@ using System.Text;
 
 namespace Model
 {
+    public enum Direction
+    {
+        East,
+        South,
+        West,
+        North
+    }
     public enum SectionType
     {
         Straight,
