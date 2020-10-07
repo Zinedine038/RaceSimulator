@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Model
@@ -14,10 +15,19 @@ namespace Model
             Name = name;
         }
 
-        public Track(string name, SectionType[] sections)
+        public Track(string name, SectionType[] sectionsTypes)
         {
 
+            Name = name;
+            Sections = GenerateSectionList(sectionsTypes);
+        }
 
+        public LinkedList<Section> GenerateSectionList(SectionType[] sectionTypes)
+        {
+            var section = new LinkedList<Section>();
+            foreach (SectionType s in sectionTypes)
+                section.AddLast(new Section(s));
+            return null;
         }
        
     }

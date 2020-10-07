@@ -12,7 +12,7 @@ namespace View
             Data.Initialize();
             Data.NextRace();
             Console.WriteLine(Data.CurrentRace.Track.Name);
-
+            Visualization.Initialize();
             for(; ; )
             {
                 Thread.Sleep(100);

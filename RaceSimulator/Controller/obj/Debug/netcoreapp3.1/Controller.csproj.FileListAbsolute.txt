@@ -10,3 +10,15 @@ C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\obj\Debug
 C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.dll
 C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.pdb
 C:\Users\zsgha\source\repos\RaceSimulatorRepo\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.csproj.CoreCompileInputs.cache
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\Controller\bin\Debug\netcoreapp3.1\Controller.deps.json
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\Controller\bin\Debug\netcoreapp3.1\Controller.dll
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\Controller\bin\Debug\netcoreapp3.1\Controller.pdb
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\Controller\bin\Debug\netcoreapp3.1\Model.dll
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\Controller\bin\Debug\netcoreapp3.1\Model.pdb
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.csprojAssemblyReference.cache
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.AssemblyInfoInputs.cache
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.AssemblyInfo.cs
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.csproj.CoreCompileInputs.cache
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.csproj.CopyComplete
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.dll
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\Controller\obj\Debug\netcoreapp3.1\Controller.pdb
