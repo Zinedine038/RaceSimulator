@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\Model.csproj": {}
+    "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Model\\Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\Model.csproj": {
+    "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\zsgha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\obj\\",
+        "projectPath": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\Zinedine\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Model\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\zsgha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Zinedine\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

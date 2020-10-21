@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+ 
 
 namespace Model
 {
@@ -11,5 +12,6 @@ namespace Model
         {
             graphic = design;
         }
+        
     }
 }
