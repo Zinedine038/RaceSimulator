@@ -17,15 +17,20 @@ namespace Model
         LeftCorner,
         RightCorner,
         StartGrid,
-        Finish
+        Finish,
+        Empty
     }
+
+
 
     public class Section
     {
         public SectionType SectionType { get; set; }
+        public bool Flipped { get; set; }
         public Section(SectionType sectionType)
         {
             SectionType = sectionType;
+            Flipped = false;
         }
     }
 }

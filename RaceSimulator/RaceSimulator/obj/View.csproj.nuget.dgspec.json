@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\RaceSimulator\\View.csproj": {}
+    "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\RaceSimulator\\View.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Controller\\Controller.csproj": {
+    "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Controller\\Controller.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Controller\\Controller.csproj",
+        "projectUniqueName": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Controller\\Controller.csproj",
         "projectName": "Controller",
-        "projectPath": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Controller\\Controller.csproj",
-        "packagesPath": "C:\\Users\\Zinedine\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Controller\\obj\\",
+        "projectPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Controller\\Controller.csproj",
+        "packagesPath": "C:\\Users\\zsgha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Controller\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Zinedine\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\zsgha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Model\\Model.csproj"
+              "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\Model.csproj"
               }
             }
           }
@@ -59,24 +56,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Model\\Model.csproj": {
+    "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\Zinedine\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Model\\obj\\",
+        "projectPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\zsgha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Zinedine\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\zsgha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -114,24 +108,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\RaceSimulator\\View.csproj": {
+    "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\RaceSimulator\\View.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\RaceSimulator\\View.csproj",
+        "projectUniqueName": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\RaceSimulator\\View.csproj",
         "projectName": "View",
-        "projectPath": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\RaceSimulator\\View.csproj",
-        "packagesPath": "C:\\Users\\Zinedine\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\RaceSimulator\\obj\\",
+        "projectPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\RaceSimulator\\View.csproj",
+        "packagesPath": "C:\\Users\\zsgha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\RaceSimulator\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Zinedine\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\zsgha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -144,11 +135,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Controller\\Controller.csproj": {
-                "projectPath": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Controller\\Controller.csproj"
+              "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Controller\\Controller.csproj": {
+                "projectPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Controller\\Controller.csproj"
               },
-              "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\Model\\Model.csproj"
+              "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\zsgha\\source\\repos\\RaceSimulatorRepo\\RaceSimulator\\Model\\Model.csproj"
               }
             }
           }
@@ -176,7 +167,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
