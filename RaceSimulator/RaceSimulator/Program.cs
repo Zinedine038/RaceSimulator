@@ -11,9 +11,10 @@ namespace View
         {
             Data.Initialize();
             Data.NextRace();
-            Console.WriteLine(Data.CurrentRace.Track.Name);
             Visualization.Initialize();
-            for(; ; )
+            Visualization.DrawTrack(Data.CurrentRace.Track);
+            Data.CurrentRace.Start();
+            for (; ; )
             {
                 Thread.Sleep(100);
             }

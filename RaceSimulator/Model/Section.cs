@@ -26,11 +26,10 @@ namespace Model
     public class Section
     {
         public SectionType SectionType { get; set; }
-        public bool Flipped { get; set; }
+        public Direction dir { get; set; }
         public Section(SectionType sectionType)
         {
             SectionType = sectionType;
-            Flipped = false;
         }
     }
 }

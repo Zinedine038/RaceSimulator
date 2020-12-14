@@ -11,6 +11,7 @@ namespace Model
         public string Name { get; set; }
         public LinkedList<Section> Sections { get; set; }
         public Section[,] visualTrack { get; set; }
+        public int sectionLength { get; set; }
 
 
         public Track(string name)
@@ -18,10 +19,11 @@ namespace Model
             Name = name;
         }
 
-        public Track(string name, SectionType[] sectionsTypes)
+        public Track(string name, SectionType[] sectionsTypes, int length)
         {
             Name = name;
             Sections = GenerateSectionList(sectionsTypes);
+            sectionLength = length;
             GenerateVisualTrack(Sections);
         }
 
@@ -30,10 +32,16 @@ namespace Model
             Direction dir = Direction.East;
             visualTrack = new Section[4,4];
             int x = 0;
-            int y = 0;
+            int y = 1;
             foreach(Section s in sections)
             {
-                AddToVisualTrack(x, y, s);
+                if(!AddToVisualTrack(x, y, s, dir))
+                {
+                    s.dir = dir;
+                    Console.WriteLine("invalid track, track overlaps");
+                    visualTrack = null;
+                    return;
+                }
                 switch(dir)
                 {
                     case Direction.East:
@@ -97,25 +105,28 @@ namespace Model
                         x -= 1;
                         break;
                 }
-                Console.WriteLine(x);
-                Console.WriteLine(y);
-                Console.WriteLine(s.SectionType);
-                if (x-1< visualTrack.GetLength(0) && y-1< visualTrack.GetLength(1))
+                if (x>3 || y>3 || x<0 || y<0)
                 {
-                    visualTrack[x, y] = s;
-                }
-                else
-                {
-                    Console.WriteLine("invalid track");
+                    Console.WriteLine("invalid track, track out of bounds");
                     visualTrack = null;
+                    return;
                 }
             }
         }
 
-        public void AddToVisualTrack(int x, int y, Section section)
+        public bool AddToVisualTrack(int x, int y, Section section,Direction dir)
         {
-            Console.WriteLine(visualTrack);
-            visualTrack[x, y] = section;
+            if (visualTrack[x, y] == null)
+            {
+                section.dir = dir;
+                visualTrack[x, y] = section;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         public LinkedList<Section> GenerateSectionList(SectionType[] sectionTypes)

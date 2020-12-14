@@ -7,8 +7,9 @@ namespace Model
 {
     public class Graphic
     {
-        public string[] graphic { get; set; }
-        public Graphic(string[] design)
+        public string[,] graphic { get; set; }
+        
+        public Graphic(string[,] design)
         {
             graphic = design;
         }
