@@ -11,11 +11,11 @@ namespace Model
         public IParticipant RightParticipant { get; set; }
         public int DistanceRight { get; set; }
 
-        public List<IParticipant> ParticipantsOnSection { get; set; }
+        //public List<IParticipant> ParticipantsOnSection { get; set; } //TODO: weghalen
 
         public SectionData()
         {
-            ParticipantsOnSection = new List<IParticipant>();
+
         }
     }
 }

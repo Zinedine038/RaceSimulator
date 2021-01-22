@@ -10,8 +10,11 @@ namespace Model
         public int Points { get; set; }
         public IEquipment Equipment { get; set; }
         public TeamColours TamColour { get; set; }
-        public int DistanceDrivenInCurrentRace { get; set; }
+        public int LapsInCurrentRace { get; set; }
+        public bool Finished { get; set; } = false;
         public Section currentSection { get; set; }
+        public bool Moved { get; set; }
+
 
         public Driver(string name)
         {

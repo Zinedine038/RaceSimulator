@@ -62,21 +62,6 @@ namespace View
                 {
                     for(int y = 0; y < track.visualTrack.GetLength(1); y++)
                     {
-                        var sectionData = Data.CurrentRace.GetSectionData(track.visualTrack[x, y]);
-                        if(sectionData.ParticipantsOnSection.Count>0)
-                        {
-                            sectionData.RightParticipant = sectionData.ParticipantsOnSection[0];
-                            if (sectionData.ParticipantsOnSection.Count > 1)
-                                sectionData.LeftParticipant = sectionData.ParticipantsOnSection[1];
-                            else
-                                sectionData.LeftParticipant = null;
-
-                        }
-                        else
-                        {
-                            sectionData.LeftParticipant = null;
-                            sectionData.RightParticipant = null;
-                        }
                         if(track.visualTrack[x,y]!=null)
                         {
                             int dir = (int)track.visualTrack[x, y].dir;
@@ -93,9 +78,18 @@ namespace View
                     Console.WriteLine();
                 }
             }
-            foreach(IParticipant p in Data.CurrentRace.FinishedParticipants)
+            PrintRaceInfo();
+
+        }
+
+        private static void PrintRaceInfo()
+        {
+            foreach (IParticipant p in Data.CurrentRace.Participants)
             {
-                Console.WriteLine(p.Name+" is finished");
+                if (p.LapsInCurrentRace <= Data.CurrentRace.lapsToFinish)
+                    Console.WriteLine($"{p.Name} is on lap {p.LapsInCurrentRace}/{Data.CurrentRace.lapsToFinish}");
+                else
+                    Console.WriteLine($"{p.Name} has finished!");
             }
         }
 
@@ -103,11 +97,21 @@ namespace View
         private static string DrawParticipants(string graphic, IParticipant right, IParticipant left)
         {
             if(right!=null)
-                graphic = graphic.Replace('1', right.Name.ToCharArray()[0]);
+            {
+                if(right.Equipment.IsBroken)
+                    graphic = graphic.Replace('1', '!');
+                else
+                    graphic = graphic.Replace('1', right.Name.ToCharArray()[0]);
+            }
             else
                 graphic = graphic.Replace('1', ' ');
             if(left!=null)
-                graphic = graphic.Replace('2', left.Name.ToCharArray()[0]);
+            {
+                if (left.Equipment.IsBroken)
+                    graphic = graphic.Replace('2', '!');
+                else
+                    graphic = graphic.Replace('2', left.Name.ToCharArray()[0]);
+            }
             else
                 graphic = graphic.Replace('2', ' ');
             return graphic;

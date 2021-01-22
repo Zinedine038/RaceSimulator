@@ -27,34 +27,7 @@ namespace Controller
         public static void AddTrack()
         {
             var sectionsSilverStone = new List<SectionType>();
-            var sectionsNascar = new List<SectionType>();
             var sectionsMonteCarlo = new List<SectionType>();
-
-            sectionsSilverStone.Add(SectionType.StartGrid);
-            sectionsSilverStone.Add(SectionType.RightCorner);
-            sectionsSilverStone.Add(SectionType.Finish);
-            sectionsSilverStone.Add(SectionType.LeftCorner);
-            sectionsSilverStone.Add(SectionType.RightCorner);
-            sectionsSilverStone.Add(SectionType.RightCorner);
-            sectionsSilverStone.Add(SectionType.Straight);
-            sectionsSilverStone.Add(SectionType.RightCorner);
-            sectionsSilverStone.Add(SectionType.LeftCorner);
-            sectionsSilverStone.Add(SectionType.RightCorner);
-            sectionsSilverStone.Add(SectionType.Straight);
-            sectionsSilverStone.Add(SectionType.RightCorner);
-
-            sectionsNascar.Add(SectionType.StartGrid);
-            sectionsNascar.Add(SectionType.Finish);
-            sectionsNascar.Add(SectionType.RightCorner);
-            sectionsNascar.Add(SectionType.Straight);
-            sectionsNascar.Add(SectionType.Straight);
-            sectionsNascar.Add(SectionType.RightCorner);
-            sectionsNascar.Add(SectionType.Straight);
-            sectionsNascar.Add(SectionType.Straight);
-            sectionsNascar.Add(SectionType.RightCorner);
-            sectionsNascar.Add(SectionType.Straight);
-            sectionsNascar.Add(SectionType.Straight);
-            sectionsNascar.Add(SectionType.RightCorner);
 
             sectionsMonteCarlo.Add(SectionType.StartGrid);
             sectionsMonteCarlo.Add(SectionType.Finish);
@@ -73,17 +46,35 @@ namespace Controller
             sectionsMonteCarlo.Add(SectionType.Straight);
             sectionsMonteCarlo.Add(SectionType.RightCorner);
 
-            Competition.Tracks.Enqueue(new Track("Silverstone",sectionsSilverStone.ToArray(),125));
-            Competition.Tracks.Enqueue(new Track("Monte Carlo", sectionsMonteCarlo.ToArray(),125));
-            Competition.Tracks.Enqueue(new Track("NASCAR",sectionsNascar.ToArray(),125));
+            sectionsSilverStone.Add(SectionType.StartGrid);
+            sectionsSilverStone.Add(SectionType.Finish);
+            sectionsSilverStone.Add(SectionType.RightCorner);
+            sectionsSilverStone.Add(SectionType.Straight);
+            sectionsSilverStone.Add(SectionType.Straight);
+            sectionsSilverStone.Add(SectionType.RightCorner);
+            sectionsSilverStone.Add(SectionType.RightCorner);
+            sectionsSilverStone.Add(SectionType.Straight);
+            sectionsSilverStone.Add(SectionType.LeftCorner);
+            sectionsSilverStone.Add(SectionType.LeftCorner);
+            sectionsSilverStone.Add(SectionType.Straight);
+            sectionsSilverStone.Add(SectionType.RightCorner);
+            sectionsSilverStone.Add(SectionType.RightCorner);
+            sectionsSilverStone.Add(SectionType.Straight);
+            sectionsSilverStone.Add(SectionType.Straight);
+            sectionsSilverStone.Add(SectionType.RightCorner);
+
+            Competition.Tracks.Enqueue(new Track("Monte Carlo", sectionsMonteCarlo.ToArray(), 125));
+            Competition.Tracks.Enqueue(new Track("Silverstone", sectionsSilverStone.ToArray(), 125));
+            Competition.Tracks.Enqueue(new Track("Monte Carlo Round 2", sectionsMonteCarlo.ToArray(), 125));
 
         }
 
         public static void NextRace()
         {
-            if(Competition.NextTrack()!=null)
+            var nextTrack = Competition.NextTrack();
+            if(nextTrack != null)
             {
-                CurrentRace = new Race(Competition.NextTrack(), Competition.Participants,3);
+                CurrentRace = new Race(nextTrack, Competition.Participants,1);
             }
         }
     }

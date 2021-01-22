@@ -14,9 +14,37 @@ namespace View
             Visualization.Initialize();
             Visualization.DrawTrack(Data.CurrentRace.Track);
             Data.CurrentRace.Start();
+            Data.CurrentRace.RaceFinished += NextRace;
             for (; ; )
             {
                 Thread.Sleep(100);
+            }
+        }
+
+        private static void NextRace(object sender, EventArgs e)
+        {
+
+            if (Data.Competition.Tracks.Count > 0)
+            {
+                Visualization.DrawTrack(Data.CurrentRace.Track); //Track draw called once more to get all the competitors of the screen
+                Console.WriteLine("Next Race Starting soon..");
+
+                //Puur voor mooier maken
+                Thread.Sleep(3000);
+
+                Console.Clear();
+                Data.CurrentRace.RaceFinished -= NextRace;
+                Data.NextRace();
+                Visualization.Initialize();
+                Visualization.DrawTrack(Data.CurrentRace.Track);
+                Data.CurrentRace.RaceFinished += NextRace;
+                Data.CurrentRace.Start();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Competition Finished!");
+                Console.WriteLine("Winners announced soon! :)");
             }
         }
     }
