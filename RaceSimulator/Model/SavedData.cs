@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Model
 {
-    public class SavedData<T>
+    public class SavedData<T> where T : IParticipantData
     {
         private List<T> _list = new List<T>();
         public void Add(T item)

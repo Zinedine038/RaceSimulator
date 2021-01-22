@@ -4,9 +4,33 @@ using System.Text;
 
 namespace Model
 {
-    public class ParticipantPoints
+    public class ParticipantPoints : IParticipantData
     {
-        public string Name { get; set; }
+        public string ParticipantName { get; set; }
         public int Points { get; set; }
+
+        public void Add(List<IParticipantData> data)
+        {
+            foreach(IParticipantData participantData in data)
+            {
+                var participantPoints = (ParticipantPoints)participantData;
+                bool exists = false;
+
+                foreach(IParticipantData name in data)
+                {
+                    if (name.ParticipantName == ParticipantName)
+                        exists = true;                    
+                }
+
+                if(!exists)
+                {
+                    data.Add(this);
+                }
+                else
+                {
+                    participantPoints.Points+=Points;
+                }
+            }
+        }        
     }
 }

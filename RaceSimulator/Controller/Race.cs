@@ -14,15 +14,22 @@ namespace Controller
         public int lapsToFinish;
         public Track Track { get; set; }
         public List<IParticipant> Participants { get; set; }
-        public List<IParticipant> FinishedParticipants { get; set; }
+
+        public Dictionary<IParticipant, int> FinishedParticipants { get; set; }
         public DateTime StartTime { get; set; }
         private Random _random;
+
         private Dictionary<Section, SectionData> _positions;
+        private Dictionary<IParticipant, TimeSpan> _previousSectionTimes;
+        private Dictionary<IParticipant, DateTime> _currentBreakdowns;
+
         private System.Timers.Timer _timer;
 
-        public ElapsedEventHandler OnTimedEvent;
+
+
+
         public event EventHandler<DriversChangedEventArgs> DriversChanged;
-        public event EventHandler<EventArgs> RaceFinished;
+        public event EventHandler<RaceFinishedEventArgs> RaceFinished;
 
         public SectionData GetSectionData(Section section)
         {
@@ -39,20 +46,35 @@ namespace Controller
         public Race(Track track, List<IParticipant> participants, int laps)
         {
             Track = track;
-            FinishedParticipants = new List<IParticipant>();
             Participants = participants;
+            _previousSectionTimes = new Dictionary<IParticipant, TimeSpan>();
+            _currentBreakdowns = new Dictionary<IParticipant, DateTime>();
+
             foreach (IParticipant p in participants)
+            {
                 p.LapsInCurrentRace = 0;
-            StartTime = new DateTime();
+                _previousSectionTimes.Add(p, TimeSpan.Zero);
+            }
+            StartTime = DateTime.Now;
             lapsToFinish = laps;
+
+
             _random = new Random(DateTime.Now.Millisecond);
             //RandomizeEquipment();
             _positions = new Dictionary<Section, SectionData>();
             PlaceParticipantsStart(track, participants);
             _timer = new System.Timers.Timer(500);
+            _timer.Elapsed += OnTimedEvent;
+                        
 
-            _timer.Elapsed += MoveDrivers;
-            _timer.Elapsed += SimulateEquipment;
+            RaceFinished += Data.Competition.RaceFinished;
+            FinishedParticipants = new Dictionary<IParticipant, int>();
+        }
+
+        public void OnTimedEvent(object sender, ElapsedEventArgs e)
+        {
+            MoveDrivers(e.SignalTime);
+            SimulateEquipment(e.SignalTime);
         }
 
         public void Start()
@@ -60,7 +82,7 @@ namespace Controller
             _timer.Start();
         }
 
-        private void SimulateEquipment(object sender, EventArgs e)
+        private void SimulateEquipment(DateTime time)
         {
             foreach(IParticipant p in Participants)
             {
@@ -79,23 +101,26 @@ namespace Controller
                             if(p.Equipment.Quality>1)
                                 p.Equipment.Quality--;
                         }
-
+                        LogBreakdown(p, _currentBreakdowns[p] - time);
+                        _currentBreakdowns.Remove(p);
                         p.Equipment.IsBroken = false;
                     }
                 }
-                if(p.Finished!=true)
+                else if(p.Finished!=true)
                 {
                     var chanceToBreak = (float) 100 / (p.Equipment.Quality*10);
                     if (_random.Next(0, 100) < chanceToBreak)
                     {
                         p.Equipment.IsBroken = true;
+                        _currentBreakdowns.Add(p, time);
+                        DriversChanged.Invoke(this, new DriversChangedEventArgs(Track));
                     }
                 }
             }
 
         }
 
-        public void MoveDrivers(object sender, EventArgs e)
+        public void MoveDrivers(DateTime time)
         {
             var finishedDriversThisUpdate = new List<IParticipant>();
             foreach(IParticipant p in Participants)
@@ -140,6 +165,7 @@ namespace Controller
                                     finishedDriversThisUpdate.Add(participant);
                                 }
                             }
+                            LogSectionTime(participant, time, previousSection);
                             DriversChanged.Invoke(this, new DriversChangedEventArgs(Track));
                         }
                         if (amountToMove+previousSectionData.DistanceLeft<=Track.sectionLength)
@@ -165,6 +191,7 @@ namespace Controller
                                     finishedDriversThisUpdate.Add(participant);
                                 }
                             }
+                            LogSectionTime(participant, time, previousSection);
                             DriversChanged.Invoke(this, new DriversChangedEventArgs(Track));
                         }
                         if (amountToMove + previousSectionData.DistanceRight <= Track.sectionLength)
@@ -214,6 +241,23 @@ namespace Controller
             }
         }
 
+        private void LogSectionTime(IParticipant participant,DateTime time,Section section)
+        {
+            TimeSpan span = time - StartTime -_previousSectionTimes[participant];
+            _previousSectionTimes[participant] += span;
+            Data.Competition.LogSectionTime(participant, span, section);
+        }
+
+        private void LogBreakdown(IParticipant participant, TimeSpan time)
+        {
+            Data.Competition.LogBreakDown(participant, time, participant.currentSection);
+        }
+
+        private void LogOvertake(IParticipant overtaker, IParticipant overtaken, Section section)
+        {
+            Data.Competition.LogOvertake(overtaker, overtaken, section, Track.Name);
+        }
+
 
 
         private void PlaceParticipantCorrectly(Section section, SectionData data, IParticipant newParticipant, int distanceRemaining)
@@ -250,6 +294,7 @@ namespace Controller
             data.LeftParticipant = overTaker;
             data.DistanceLeft = overTakerDistance;
 
+            LogOvertake(overTaker, data.RightParticipant, overTaker.currentSection);
             DriversChanged.Invoke(this, new DriversChangedEventArgs(Track));
         }
 
@@ -279,9 +324,10 @@ namespace Controller
         {
             foreach(IParticipant p in finished)
             {
-                //Participants.Remove(p);
                 p.Finished = true;
-                FinishedParticipants.Add(p);
+                if (!FinishedParticipants.ContainsKey(p))
+                    FinishedParticipants.Add(p, FinishedParticipants.Count + 1);
+
                 var sectionData = GetSectionData(p.currentSection);
                 if (sectionData.RightParticipant == p)
                     sectionData.RightParticipant = null;
@@ -296,15 +342,14 @@ namespace Controller
 
         private bool CheckFinished()
         {
-            var noDupes = FinishedParticipants.Distinct().ToList();
-            return noDupes.Count == Data.Competition.Participants.Count;
+            return FinishedParticipants.Count == Data.Competition.Participants.Count;
         }
 
         private void FinishRace()
         {
-            _timer.Elapsed -= MoveDrivers;
             _timer.Stop();
-            RaceFinished?.Invoke(this, new EventArgs());
+            _timer.Elapsed -= OnTimedEvent;
+            RaceFinished?.Invoke(this, new RaceFinishedEventArgs(GetFinishedPlacements()));
             if(DriversChanged!=null)
             {
                 foreach (Delegate d in DriversChanged.GetInvocationList())
@@ -315,12 +360,7 @@ namespace Controller
 
         }
 
-        public List<IParticipant> GetPlacements()
-        {
-            return FinishedParticipants;
-        }
-
-        public List<IParticipant> GetFinishedParticipants()
+        public Dictionary<IParticipant,int> GetFinishedPlacements()
         {
             return FinishedParticipants;
         }
