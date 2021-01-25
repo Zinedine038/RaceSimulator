@@ -8,5 +8,6 @@ namespace Model
     {
         public string ParticipantName { get; set; }
         public void Add(List<IParticipantData> data);
+        public string GetBestParticipant(List<IParticipantData> data);
     }
 }

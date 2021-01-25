@@ -7,9 +7,8 @@ namespace Model
     public enum TeamColours
     {
         Red,
-        Green,
+        White,
         Yellow,
-        Grey,
         Blue
     }
     public interface IParticipant

@@ -6,10 +6,18 @@ namespace Model
 {
     public class SavedData<T> where T : IParticipantData
     {
-        private List<T> _list = new List<T>();
+        private List<IParticipantData> _list = new List<IParticipantData>();
         public void Add(T item)
         {
-            _list.Add(item);
+            item.Add(_list);
+        }
+
+        public string GetBestParticipant()
+        {
+            if (_list.Count == 0)
+                return "";
+            else
+                return _list[0].GetBestParticipant(_list);
         }
     }
 }

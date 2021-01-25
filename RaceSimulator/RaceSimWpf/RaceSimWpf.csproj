@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Cars\Equipment_Broke.png" />
+    <None Remove="Images\Cars\Hammond_East.png" />
+    <None Remove="Images\Cars\Hammond_North.png" />
+    <None Remove="Images\Cars\Hammond_South.png" />
+    <None Remove="Images\Cars\Hammond_West.png" />
+    <None Remove="Images\Cars\Jeremy_East.png" />
+    <None Remove="Images\Cars\Jeremy_North.png" />
+    <None Remove="Images\Cars\Jeremy_South.png" />
+    <None Remove="Images\Cars\Jeremy_West.png" />
+    <None Remove="Images\Cars\May_East.png" />
+    <None Remove="Images\Cars\May_North.png" />
+    <None Remove="Images\Cars\May_South.png" />
+    <None Remove="Images\Cars\May_West.png" />
+    <None Remove="Images\Cars\Stig_East.png" />
+    <None Remove="Images\Cars\Stig_North.png" />
+    <None Remove="Images\Cars\Stig_South.png" />
+    <None Remove="Images\Cars\Stig_West.png" />
+    <None Remove="Images\Track\CornerLeft.png" />
+    <None Remove="Images\Track\CornerLeftMirrored.png" />
+    <None Remove="Images\Track\CornerRight.png" />
+    <None Remove="Images\Track\CornerRightMirrored.png" />
+    <None Remove="Images\Track\Empty.png" />
+    <None Remove="Images\Track\Finish.png" />
+    <None Remove="Images\Track\StartGrid.png" />
+    <None Remove="Images\Track\StraightHor.png" />
+    <None Remove="Images\Track\StraightVer.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\Cars\Equipment_Broke.png" />
+    <Content Include="Images\Cars\Hammond_East.png" />
+    <Content Include="Images\Cars\Hammond_North.png" />
+    <Content Include="Images\Cars\Hammond_South.png" />
+    <Content Include="Images\Cars\Hammond_West.png" />
+    <Content Include="Images\Cars\Jeremy_East.png" />
+    <Content Include="Images\Cars\Jeremy_North.png" />
+    <Content Include="Images\Cars\Jeremy_South.png" />
+    <Content Include="Images\Cars\Jeremy_West.png" />
+    <Content Include="Images\Cars\May_East.png" />
+    <Content Include="Images\Cars\May_North.png" />
+    <Content Include="Images\Cars\May_South.png" />
+    <Content Include="Images\Cars\May_West.png" />
+    <Content Include="Images\Cars\Stig_East.png" />
+    <Content Include="Images\Cars\Stig_North.png" />
+    <Content Include="Images\Cars\Stig_South.png" />
+    <Content Include="Images\Cars\Stig_West.png" />
+    <Content Include="Images\Track\CornerLeft.png" />
+    <Content Include="Images\Track\CornerLeftMirrored.png" />
+    <Content Include="Images\Track\CornerRight.png" />
+    <Content Include="Images\Track\CornerRightMirrored.png" />
+    <Content Include="Images\Track\Empty.png" />
+    <Content Include="Images\Track\Finish.png" />
+    <Content Include="Images\Track\StartGrid.png" />
+    <Content Include="Images\Track\StraightHor.png" />
+    <Content Include="Images\Track\StraightVer.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.csproj" />
+    <ProjectReference Include="..\Model\Model.csproj" />
+  </ItemGroup>
+
+</Project>

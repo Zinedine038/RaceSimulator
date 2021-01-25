@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "EsZkR+n+zJ7r3JaoTixS/mVZezujF0Isza29hJrWjpLSPo5EsL1+rkGNVTQegH93DNj+fYqbGI3IYK4j9Qe1Rg==",
+  "dgSpecHash": "KF293g1RPfhEhy0x2UxQHyfaz+kQKTzOH1+j1NLcuZr6z6xbgedZIj8f/Gbjo/s64shqTz311pEIJamtwraZGA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Zinedine\\Source\\Repos\\Zinedine038\\RaceSimulator\\RaceSimulator\\RaceSimulator\\View.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Zinedine\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Zinedine\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Zinedine\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -29,8 +29,13 @@ C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimul
 C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimulator\obj\Debug\netcoreapp3.1\View.csprojAssemblyReference.cache
 C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimulator\obj\Debug\netcoreapp3.1\View.AssemblyInfoInputs.cache
 C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimulator\obj\Debug\netcoreapp3.1\View.AssemblyInfo.cs
-C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimulator\obj\Debug\netcoreapp3.1\View.csproj.CoreCompileInputs.cache
 C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimulator\obj\Debug\netcoreapp3.1\View.csproj.CopyComplete
 C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimulator\obj\Debug\netcoreapp3.1\View.dll
 C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimulator\obj\Debug\netcoreapp3.1\View.pdb
 C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimulator\obj\Debug\netcoreapp3.1\View.genruntimeconfig.cache
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimulator\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimulator\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimulator\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimulator\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimulator\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimulator\obj\Debug\netcoreapp3.1\View.csproj.CoreCompileInputs.cache

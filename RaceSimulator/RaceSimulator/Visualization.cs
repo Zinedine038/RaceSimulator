@@ -18,7 +18,7 @@ namespace View
         static Graphic startGrid;
         static Graphic empty;
         #endregion
-
+        const string buffer = "                                       ";
         public static void OnDriversChanged(object sender, DriversChangedEventArgs e)
         {
             DrawTrack(e.Track);
@@ -91,6 +91,21 @@ namespace View
                 else
                     Console.WriteLine($"{p.Name} has finished!");
             }
+            Console.WriteLine($"Currently the most overtakes are done by: { Data.Competition.Overtakes.GetBestParticipant() }" + buffer);
+        }
+
+        public static void DrawEndOfRaceScreen()
+        {
+            DrawTrack(Data.CurrentRace.Track);
+            Console.WriteLine($"Fastest section in this competition was driven by: { Data.Competition.Overtakes.GetBestParticipant() }" + buffer);
+            Console.WriteLine("Next Race Starting soon..");
+        }
+
+        public static void DrawEndOfCompetitionScreen()
+        {
+            Console.Clear();
+            Console.WriteLine("Competition Finished!");
+            Console.WriteLine($"The Winner is: { Data.Competition.Points.GetBestParticipant() }" );
         }
 
 

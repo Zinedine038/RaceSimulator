@@ -28,6 +28,7 @@ namespace Controller
         {
             var sectionsSilverStone = new List<SectionType>();
             var sectionsMonteCarlo = new List<SectionType>();
+            var topGearTestTrack = new List<SectionType>();
 
             sectionsMonteCarlo.Add(SectionType.StartGrid);
             sectionsMonteCarlo.Add(SectionType.Finish);
@@ -63,10 +64,20 @@ namespace Controller
             sectionsSilverStone.Add(SectionType.Straight);
             sectionsSilverStone.Add(SectionType.RightCorner);
 
+            topGearTestTrack.Add(SectionType.StartGrid);
+            topGearTestTrack.Add(SectionType.Finish);
+            topGearTestTrack.Add(SectionType.RightCorner);
+            topGearTestTrack.Add(SectionType.Straight);
+            topGearTestTrack.Add(SectionType.RightCorner);
+            topGearTestTrack.Add(SectionType.Straight);
+            topGearTestTrack.Add(SectionType.Straight);
+            topGearTestTrack.Add(SectionType.RightCorner);
+            topGearTestTrack.Add(SectionType.Straight);
+            topGearTestTrack.Add(SectionType.RightCorner);;
+
             Competition.Tracks.Enqueue(new Track("Monte Carlo", sectionsMonteCarlo.ToArray(), 125));
             Competition.Tracks.Enqueue(new Track("Silverstone", sectionsSilverStone.ToArray(), 125));
-            Competition.Tracks.Enqueue(new Track("Monte Carlo Round 2", sectionsMonteCarlo.ToArray(), 125));
-
+            Competition.Tracks.Enqueue(new Track("Top Gear Test Track", topGearTestTrack.ToArray(), 125));
         }
 
         public static void NextRace()

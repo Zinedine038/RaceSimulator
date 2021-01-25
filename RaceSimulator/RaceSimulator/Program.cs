@@ -26,8 +26,7 @@ namespace View
 
             if (Data.Competition.Tracks.Count > 0)
             {
-                Visualization.DrawTrack(Data.CurrentRace.Track); //Track draw called once more to get all the competitors of the screen
-                Console.WriteLine("Next Race Starting soon..");
+                Visualization.DrawEndOfRaceScreen();
 
                 //Puur voor mooier maken
                 Thread.Sleep(3000);
@@ -42,9 +41,7 @@ namespace View
             }
             else
             {
-                Console.Clear();
-                Console.WriteLine("Competition Finished!");
-                Console.WriteLine("Winners announced soon! :)");
+                Visualization.DrawEndOfCompetitionScreen();
             }
         }
     }

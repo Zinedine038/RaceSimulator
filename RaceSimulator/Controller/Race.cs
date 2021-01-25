@@ -73,8 +73,8 @@ namespace Controller
 
         public void OnTimedEvent(object sender, ElapsedEventArgs e)
         {
-            MoveDrivers(e.SignalTime);
             SimulateEquipment(e.SignalTime);
+            MoveDrivers(e.SignalTime);
         }
 
         public void Start()
@@ -101,8 +101,11 @@ namespace Controller
                             if(p.Equipment.Quality>1)
                                 p.Equipment.Quality--;
                         }
-                        LogBreakdown(p, _currentBreakdowns[p] - time);
-                        _currentBreakdowns.Remove(p);
+                        if(_currentBreakdowns.ContainsKey(p))
+                        {
+                            LogBreakdown(p, _currentBreakdowns[p] - time);
+                            _currentBreakdowns.Remove(p);
+                        }
                         p.Equipment.IsBroken = false;
                     }
                 }
@@ -113,7 +116,6 @@ namespace Controller
                     {
                         p.Equipment.IsBroken = true;
                         _currentBreakdowns.Add(p, time);
-                        DriversChanged.Invoke(this, new DriversChangedEventArgs(Track));
                     }
                 }
             }
@@ -194,11 +196,11 @@ namespace Controller
                             LogSectionTime(participant, time, previousSection);
                             DriversChanged.Invoke(this, new DriversChangedEventArgs(Track));
                         }
-                        if (amountToMove + previousSectionData.DistanceRight <= Track.sectionLength)
+                        else if (amountToMove + previousSectionData.DistanceRight <= Track.sectionLength)
                         {
                             previousSectionData.DistanceRight += amountToMove;
                             if (previousSectionData.DistanceRight > previousSectionData.DistanceLeft)
-                                Overtake(previousSectionData);
+                                Overtake(previousSectionData,false);
                         }
                         participant.Moved = true;
                     }
@@ -228,7 +230,7 @@ namespace Controller
                         {
                             previousSectionData.DistanceRight += amountToMove;
                             if (previousSectionData.DistanceRight > previousSectionData.DistanceLeft)
-                                Overtake(previousSectionData);
+                                Overtake(previousSectionData,true);
                         }
                         else
                         {
@@ -250,7 +252,7 @@ namespace Controller
 
         private void LogBreakdown(IParticipant participant, TimeSpan time)
         {
-            Data.Competition.LogBreakDown(participant, time, participant.currentSection);
+            Data.Competition.LogBreakDown(participant, time);
         }
 
         private void LogOvertake(IParticipant overtaker, IParticipant overtaken, Section section)
@@ -283,7 +285,7 @@ namespace Controller
             }
         }
 
-        private void Overtake(SectionData data)
+        private void Overtake(SectionData data, bool test)
         {
             var overTaker = data.RightParticipant;
             var overTakerDistance = data.DistanceRight;

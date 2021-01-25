@@ -9,19 +9,19 @@ namespace Model
         public List<IParticipant> Participants { get; set; }
         public Queue<Track> Tracks { get; set; }
 
-        public SavedData<ParticipantPoints> Points { get; set; }
+        public SavedData<ParticipantPointsData> Points { get; set; }
 
-        public SavedData<ParticipantTimeAndSection> SectionTimes { get; set; }
-        public SavedData<ParticipantTimeAndSection> Breakdowns { get; set; }
+        public SavedData<SectionTimeData> SectionTimes { get; set; }
+        public SavedData<BreakdownData> Breakdowns { get; set; }
         public SavedData<OvertakeData> Overtakes { get; set; }
 
         public Competition()
         {
             Participants = new List<IParticipant>();
             Tracks = new Queue<Track>();
-            Points = new SavedData<ParticipantPoints>();
-            Breakdowns = new SavedData<ParticipantTimeAndSection>();
-            SectionTimes = new SavedData<ParticipantTimeAndSection>();
+            Points = new SavedData<ParticipantPointsData>();
+            Breakdowns = new SavedData<BreakdownData>();
+            SectionTimes = new SavedData<SectionTimeData>();
             Overtakes = new SavedData<OvertakeData>();
         }
 
@@ -37,18 +37,18 @@ namespace Model
             DistributePoints(e.Participants);
         }
 
-        public void LogBreakDown(IParticipant participant, TimeSpan time, Section section)
+        public void LogBreakDown(IParticipant participant, TimeSpan time)
         {
-            var breakdownTime = new ParticipantTimeAndSection();
-            breakdownTime.ParticipantName = participant.Name;
-            breakdownTime.Time = time;
-            breakdownTime.Section = section;
-            Breakdowns.Add(breakdownTime);
+            var breakdownData = new BreakdownData();
+            breakdownData.ParticipantName = participant.Name;
+            breakdownData.Time = time;
+            breakdownData.Vehicle = participant.Equipment;
+            Breakdowns.Add(breakdownData);
         }
 
         public void LogSectionTime(IParticipant participant,TimeSpan time,Section section)
         {
-            var sectionTime = new ParticipantTimeAndSection();
+            var sectionTime = new SectionTimeData();
             sectionTime.ParticipantName = participant.Name;
             sectionTime.Time = time;
             sectionTime.Section = section;
@@ -61,7 +61,7 @@ namespace Model
             overtakeData.ParticipantName = overtaker.Name;
             overtakeData.Overtaken = overtaken.Name;
             overtakeData.TrackName = trackName;
-            overtakeData.section = section;
+            overtakeData.Section = section;
             Overtakes.Add(overtakeData);
         }
 
@@ -70,7 +70,7 @@ namespace Model
             int earnedPoints = endResult.Count;
             foreach(KeyValuePair<IParticipant, int> p in endResult)
             {
-                var points = new ParticipantPoints();
+                var points = new ParticipantPointsData();
                 points.ParticipantName = p.Key.Name;
                 points.Points = earnedPoints;
                 Points.Add(points);
