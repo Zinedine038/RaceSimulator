@@ -23,14 +23,16 @@ namespace RaceSimWpf
     /// </summary>
     public partial class MainWindow : Window
     {
+        private RaceStatistics _racestats;
+        private CompetitionStatistics _competitionstats;
         public MainWindow()
         {
-            InitializeComponent();
             Data.Initialize();
             Data.NextRace();
             Data.CurrentRace.Start();
             Data.CurrentRace.RaceFinished += NextRace;
             Data.CurrentRace.DriversChanged += OnDriversChanged;
+            InitializeComponent();
         }
 
         private void OnDriversChanged(object sender, EventArgs e)
@@ -49,12 +51,9 @@ namespace RaceSimWpf
 
             if (Data.Competition.Tracks.Count > 0)
             {
-                //Visualization.DrawEndOfRaceScreen();
-
                 //Puur voor mooier maken
                 Thread.Sleep(3000);
 
-                Console.Clear();
                 Data.CurrentRace.RaceFinished -= NextRace;
                 Data.NextRace();
                 //Visualization.Initialize();
@@ -65,8 +64,25 @@ namespace RaceSimWpf
             }
             else
             {
-                //Visualization.DrawEndOfCompetitionScreen();
+
             }
+        }
+
+        private void MenuItem_Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Racestats_Click(object sender, RoutedEventArgs e)
+        {
+            _racestats = new RaceStatistics();
+            _racestats.Show();
+        }
+
+        private void Competitionstats_Click(object sender, RoutedEventArgs e)
+        {
+            _competitionstats = new CompetitionStatistics();
+            _competitionstats.Show();
         }
     }
 

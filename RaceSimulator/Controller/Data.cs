@@ -19,10 +19,10 @@ namespace Controller
 
         public static void AddParticipants()
         {
-            Competition.Participants.Add(new Driver("Clarkson"));
-            Competition.Participants.Add(new Driver("May"));
-            Competition.Participants.Add(new Driver("Hammond"));
-            Competition.Participants.Add(new Driver("Stig"));
+            Competition.Participants.Add(new Driver("Clarkson",TeamColours.White));
+            Competition.Participants.Add(new Driver("May",TeamColours.Red));
+            Competition.Participants.Add(new Driver("Hammond",TeamColours.Yellow));
+            Competition.Participants.Add(new Driver("Stig",TeamColours.Blue));
         }
         public static void AddTrack()
         {
@@ -75,9 +75,9 @@ namespace Controller
             topGearTestTrack.Add(SectionType.Straight);
             topGearTestTrack.Add(SectionType.RightCorner);;
 
+            Competition.Tracks.Enqueue(new Track("Top Gear Test Track", topGearTestTrack.ToArray(), 125));
             Competition.Tracks.Enqueue(new Track("Monte Carlo", sectionsMonteCarlo.ToArray(), 125));
             Competition.Tracks.Enqueue(new Track("Silverstone", sectionsSilverStone.ToArray(), 125));
-            Competition.Tracks.Enqueue(new Track("Top Gear Test Track", topGearTestTrack.ToArray(), 125));
         }
 
         public static void NextRace()

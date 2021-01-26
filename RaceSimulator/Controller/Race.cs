@@ -26,9 +26,8 @@ namespace Controller
         private System.Timers.Timer _timer;
 
 
-
-
-        public event EventHandler<DriversChangedEventArgs> DriversChanged;
+        public static event EventHandler<EventArgs> RaceStarted;
+        public event EventHandler<DriversChangedEventArgs>  DriversChanged;
         public event EventHandler<RaceFinishedEventArgs> RaceFinished;
 
         public SectionData GetSectionData(Section section)
@@ -65,8 +64,8 @@ namespace Controller
             PlaceParticipantsStart(track, participants);
             _timer = new System.Timers.Timer(500);
             _timer.Elapsed += OnTimedEvent;
-                        
 
+            RaceStarted?.Invoke(this, new EventArgs());
             RaceFinished += Data.Competition.RaceFinished;
             FinishedParticipants = new Dictionary<IParticipant, int>();
         }
@@ -277,6 +276,7 @@ namespace Controller
 
                 data.LeftParticipant = newParticipant;
                 data.DistanceLeft = distanceRemaining;
+                Data.Competition.LogOvertake(newParticipant, data.RightParticipant, section, Track.Name);
             }
             else if(data.LeftParticipant!=null)
             {

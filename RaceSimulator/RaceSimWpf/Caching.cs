@@ -33,6 +33,9 @@ namespace RaceSimWpf
 
         public static Bitmap GetTrackSize(int x, int y)
         {
+            int width = x;
+            int height = y;
+
             if (_bitMaps.ContainsKey("empty"))
             {
                 Bitmap clone = (Bitmap)_bitMaps["empty"].Clone();
@@ -40,11 +43,12 @@ namespace RaceSimWpf
             }
             else
             {
-                var trackEmpty = new Bitmap(x * 256, y * 256);
+                var trackEmpty = new Bitmap(width, height);
                 using (Graphics gfx = Graphics.FromImage(trackEmpty))
-                using (SolidBrush background = new SolidBrush(System.Drawing.Color.Gray))
+                using (SolidBrush background = new SolidBrush(System.Drawing.Color.Green))
                 {
-                    gfx.FillRectangle(background, 0, 0, 256, 256);
+                    trackEmpty.SetResolution(gfx.DpiX, gfx.DpiY);
+                    gfx.FillRectangle(background, 0, 0, width, height);
                 }
                 _bitMaps.Add("empty", trackEmpty);
                 Bitmap clone = (Bitmap)_bitMaps["empty"].Clone();

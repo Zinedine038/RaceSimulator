@@ -19,5 +19,10 @@ namespace Model
             else
                 return _list[0].GetBestParticipant(_list);
         }
+
+        public List<IParticipantData> GetData()
+        {
+            return _list;
+        }
     }
 }

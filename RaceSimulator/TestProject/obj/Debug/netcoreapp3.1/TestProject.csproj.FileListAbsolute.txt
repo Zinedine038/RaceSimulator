@@ -210,3 +210,8 @@ C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\TestProje
 C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\TestProject\obj\Debug\netcoreapp3.1\TestProject.dll
 C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\TestProject\obj\Debug\netcoreapp3.1\TestProject.pdb
 C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\TestProject\obj\Debug\netcoreapp3.1\TestProject.genruntimeconfig.cache
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\TestProject\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\TestProject\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\TestProject\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\TestProject\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\TestProject\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll

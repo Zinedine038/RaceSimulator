@@ -19,6 +19,7 @@ namespace View
         static Graphic empty;
         #endregion
         const string buffer = "                                       ";
+
         public static void OnDriversChanged(object sender, DriversChangedEventArgs e)
         {
             DrawTrack(e.Track);

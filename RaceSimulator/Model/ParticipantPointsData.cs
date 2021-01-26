@@ -34,5 +34,17 @@ namespace Model
             }
             return best;
         }
+
+        //public Dictionary<string,int> GetParticipantPoints(List<IParticipantData> data)
+        //{
+        //    Dictionary<string, int> points = new Dictionary<string, int>();
+        //    var participantPoints = data.Cast<ParticipantPointsData>().ToList();
+        //    foreach(ParticipantPointsData participantData in data)
+        //    {
+        //        points.Add(participantData.ParticipantName, participantData.Points);
+        //    }
+        //    return points;
+        //}
+
     }
 }

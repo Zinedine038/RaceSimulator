@@ -16,7 +16,7 @@ namespace Model
         public string Name { get; set; }
         public int Points { get; set; }
         public IEquipment Equipment { get; set; }
-        public TeamColours TamColour { get; set; }
+        public TeamColours TeamColour { get; set; }
         public int LapsInCurrentRace { get; set; }
         public bool Finished { get; set; }
         public Section currentSection { get; set; }

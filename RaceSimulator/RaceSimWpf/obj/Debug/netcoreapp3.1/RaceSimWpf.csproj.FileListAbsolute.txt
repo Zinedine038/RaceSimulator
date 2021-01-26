@@ -28,3 +28,8 @@ C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimWp
 C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimWpf\obj\Debug\netcoreapp3.1\RaceSimWpf.dll
 C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimWpf\obj\Debug\netcoreapp3.1\RaceSimWpf.pdb
 C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimWpf\obj\Debug\netcoreapp3.1\RaceSimWpf.genruntimeconfig.cache
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimWpf\obj\Debug\netcoreapp3.1\CompetitionStatistics.g.cs
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimWpf\obj\Debug\netcoreapp3.1\RaceStatistics.g.cs
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimWpf\obj\Debug\netcoreapp3.1\CompetitionStatistics.baml
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimWpf\obj\Debug\netcoreapp3.1\RaceStatistics.baml
+C:\Users\Zinedine\Source\Repos\Zinedine038\RaceSimulator\RaceSimulator\RaceSimWpf\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
