@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RaceSimWpf"
         mc:Ignorable="d"
-        Title="RaceStatistics" Height="450" Width="800">
-    <Grid>
-        
+        Title="RaceStatistics" Height="550" Width="800">
+    <Window.DataContext>
+        <local:RaceContextData/>
+    </Window.DataContext>
+    <Grid Background="#FF7A7A7A">
+        <Label HorizontalAlignment="Center" HorizontalContentAlignment="Center">Most Recent Overtake:</Label>
+        <Label HorizontalAlignment="Center" Margin="0,20,0,0" HorizontalContentAlignment="Center" Content="{Binding MostRecentOvertake}" ></Label>
+        <ListView Margin="60" Height="150" VerticalAlignment="Top" ItemsSource="{Binding AverageTimes}" Background="#FF7A7A7A">
+        </ListView>
+        <Label HorizontalAlignment="Center" Height="30" HorizontalContentAlignment="Center">Breakdowns</Label>
+        <ListView Margin="60" Height="150" VerticalAlignment="Bottom" ItemsSource="{Binding BreakdownLog}" Background="#FF7A7A7A">
+        </ListView>
     </Grid>
 </Window>

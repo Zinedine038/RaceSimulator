@@ -53,7 +53,7 @@ namespace RaceSimWpf {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/RaceSimWpf;V1.0.0.0;component/competitionstatistics.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/RaceSimWpf;component/competitionstatistics.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CompetitionStatistics.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

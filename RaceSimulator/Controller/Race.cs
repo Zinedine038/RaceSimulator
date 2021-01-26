@@ -102,7 +102,7 @@ namespace Controller
                         }
                         if(_currentBreakdowns.ContainsKey(p))
                         {
-                            LogBreakdown(p, _currentBreakdowns[p] - time);
+                            LogBreakdown(p, time - _currentBreakdowns[p]);
                             _currentBreakdowns.Remove(p);
                         }
                         p.Equipment.IsBroken = false;
